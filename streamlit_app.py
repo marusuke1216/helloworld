@@ -11,21 +11,21 @@ st.write("I'm",age,'years old')
 st.sbheader('Range slider')
 
 values = st.slider(
-  'Salect a range of values',
-  0.0,100.0,(25.0,75.0))
-  st.write('values:',values)
+   'Salect a range of values',
+   0.0,100.0,(25.0,75.0))
+st.write('values:',values)
 
 st.subheader('Range time slider')
 
 appointment = st.slider(
   "Schedule your appointment:"
   value=(time(11,30),time(12,45)))
-  st.write("you're scheduled for:",apppintoment)
+st.write("you're scheduled for:",apppintoment)
 
 st.subheader('datetime slider')
 
 start_time = st.slider(
- "When do you start?"
- value=datetime(2020,1,1,9,30),
- format="MM/DD/YY - hh:mm")
- st.write("start timee:",start_time)
+  "When do you start?"
+  value=datetime(2020,1,1,9,30),
+  format="MM/DD/YY - hh:mm")
+st.write("start timee:",start_time)
