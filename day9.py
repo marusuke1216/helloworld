@@ -6,6 +6,6 @@ zd.header('Line chart')
 
 chart_data = pd.DataFrame(
      np.random.randn(20, 3),
-     index=['a', 'b', 'c','d'])
-
+     columns=['a', 'b', 'c'])
+     
 zd.line_chart(chart_data)
