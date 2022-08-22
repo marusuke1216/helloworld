@@ -12,7 +12,7 @@ st.sbheader('Range slider')
 
 values = st.slider(
   'Salect a range of values',
-  0,0,100.0,(25.0, 75.0))
+  0.0,100.0,(25.0,75.0))
   st.write('values:',values)
 
 st.subheader('Range time slider')
@@ -29,4 +29,3 @@ start_time = st.slider(
  value=datetime(2020,1,1,9,30),
  format="MM/DD/YY - hh:mm")
  st.write("start timee:",start_time)
- 
