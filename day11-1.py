@@ -1,10 +1,10 @@
-import streamlit as stz
+import streamlit as st
 
-stz.header('st.multiselect')
+st.header('st.multiselect')
 
 options = st.multiselect(
      'What are your favorite colors',
      ['Green', 'Yellow', 'Red', 'Blue'],
      ['Yellow', 'Red'])
 
-stz.write('You selected:', options)
+st.write('You selected:', options)
