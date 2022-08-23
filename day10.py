@@ -6,4 +6,4 @@ option = st.selectbox(
  'what is your favorit clor?',
  ('blue','Red','Green'))
 
- st.write('Your favorite color is', option)
+st.write('Your favorite color is', option)
