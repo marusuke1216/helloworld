@@ -2,7 +2,7 @@ import streamlit as st
 
 st.title('Customizing the theme of Streamlit apps')
 
-st.Write('Contents of the '.Steamlit/Config.toml' file of this app')
+st.Write('Contents of the '.streamlit/Config.toml' file of this app')
 
 st.code("""
  [theme]
