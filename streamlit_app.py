@@ -1,38 +1,17 @@
-import streamlit as st
-from datetime import time, datetime
+import stramlit as st
+import pandas as import pd
 
-st.title('Customizing the theme of Streamlit apps')
+st.title('st.file_uploader')
 
-st.write('Contents of the `.streamlit/config.toml` file of this app')
+st.subheader('Input CSV')
+uploaded_file = st.file_uploader("Choose a file")
 
-st.code("""
- [theme]
- primaryColor="zzzzzzz"
- backgroundColor="#2E86C1"
- secondaryBackgroundColor="#AED6F1"
- textColor="#FFFFFF"
- font="monospace"
- """)
-
-number = st.sidebar.slider('Select a number:', 0, 10, 5)
-st.write('Selected number from slider widget is:', number)
-
-
-appointment = st.slider(
-  "Schedule your appointment:",
-  value=(time(11, 30), time(12, 45)))
-st.write("you're scheduled for:",appointment)
-
-st.subheader('datetime slider')
-
-start_time = st.slider(
-  "When do you start?",
-  value=datetime(2020,1,1,9,30),
-  format="MM/DD/YY - hh:mm")
-st.write("start timee:",start_time)
-
-start_time = st.slider(
-  "When do you start?",
-  value=datetime(2020,1,1,9,30),
-  format="MM/DD/YY - hh:mm")
-st.write("git追加:",start_time)
+if uploaded_file is not None:
+    df = pd.read_csv(uploaded_file)
+    st.subheader('DataFrame')
+    st.write(df)
+    st.subheader('Descriptive Statistics')
+    st.write(df.describle())
+else
+    st.info('uploaded a csv file')
+    
