@@ -1,5 +1,5 @@
 import stramlit as st
-import pandas as import pd
+import pandas as pd
 
 st.title('st.file_uploader')
 
@@ -14,4 +14,3 @@ if uploaded_file is not None:
     st.write(df.describle())
 else
     st.info('uploaded a csv file')
-    
