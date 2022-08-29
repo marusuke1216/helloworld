@@ -10,7 +10,7 @@ with st.expander('About this app'):
 
 st.sidebar.header('Input')
 st.sidebar.subheader('Input CSV')
-uploaded_file = st.sidebar.file_uploader("Choose a file")Hamburger', 'Pizza'])
+
 
 st.header('Output')
 
