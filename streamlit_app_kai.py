@@ -12,7 +12,7 @@ with st.expander('About this app'):
 st.sidebar.header('Input')
 st.sidebar.subheader('Input CSV')
 uploaded_file = st.sidebar.file_uploader("Choose a file")
-st.sidebar.balloons()
+with st.sidebar.balloons()
 
 st.header('Output')
 
