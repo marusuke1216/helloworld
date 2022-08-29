@@ -11,6 +11,6 @@ if uploaded_file is not None:
     st.subheader('DataFrame')
     st.write(df)
     st.subheader('Descriptive Statistics')
-    st.write(df.describle())
+    st.write(df.describe())
 else:
     st.info('uploaded a csv file')
