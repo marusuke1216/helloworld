@@ -10,9 +10,9 @@ with st.expander('About this app'):
  st.image('https://streamlit.io/images/brand/streamlit-logo-secondary-colormark-darktext.png', width=250)
 
 st.sidebar.header('Input')
-st.sidebar.subheader('Input CSV')
+with st.sidebar.subheader('Input CSV')
 uploaded_file = st.sidebar.file_uploader("Choose a file")
-with st.sidebar.balloons()
+ st.sidebar.balloons()
 
 st.header('Output')
 
