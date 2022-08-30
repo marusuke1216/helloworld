@@ -22,6 +22,7 @@ if uploaded_file is not None:
   st.write(df)
   st.subheader('Descriptive Statistics')
   st.write(df.plot)
+  st.write(df.describe())
   st.sidebar.balloons()
 else:
   st.info('☝️ Upload a CSV file')
