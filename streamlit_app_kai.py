@@ -10,9 +10,9 @@ with st.expander('About this app'):
  st.image('https://streamlit.io/images/brand/streamlit-logo-secondary-colormark-darktext.png', width=250)
 
 st.sidebar.header('Input')
-with st.sidebar.subheader('Input CSV')
- uploaded_file = st.sidebar.file_uploader("Choose a file")
-   st.sidebar.balloons()
+st.sidebar.subheader('Input CSV')
+uploaded_file = st.sidebar.file_uploader("Choose a file")
+
 
 st.header('Output')
 
@@ -22,5 +22,6 @@ if uploaded_file is not None:
   st.write(df)
   st.subheader('Descriptive Statistics')
   st.write(df.plot)
+  st.sidebar.balloons()
 else:
   st.info('☝️ Upload a CSV file')
