@@ -5,7 +5,7 @@ st.title('ST,form')
 st.header('1. Example of using `with` notation')
 st.subheader("Coffee machine")
 
-with st.form('my_form')
+with st.form('my_form'):
   st.subheader('**Order your coffee**')
 
     coffee_bean_val = st.selectbox('Coffee bean', ['Arabica', 'Robusta'])
