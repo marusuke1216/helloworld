@@ -2,7 +2,7 @@ import streamlit as st
 
 st.title('ST,form')
 
-st.header('1.exmple of using 'with' notation')
+st.header('1. Example of using `with` notation')
 st.subheader("Coffee machine")
 
 with st.form('my_form')
