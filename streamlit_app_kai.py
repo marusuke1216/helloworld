@@ -15,9 +15,8 @@ uploaded_file = st.sidebar.file_uploader("Choose a file")
 
 
 st.header('Output')
-
+st.form('my_form')
 if uploaded_file is not None:
-  st.form('my_form')
   df = pd.read_csv(uploaded_file)
   st.subheader('DataFrame')
   st.write(df)
