@@ -14,7 +14,7 @@ with st.form('my_form'):
   milk_val = st.select_slider('Milk intensity', ['None', 'Low', 'Medium', 'High'])
   owncup_val = st.checkbox('Bring own cup')
 
-  submitted = st,form_sbumit_button('実行')
+  submitted = st.form_sbumit_button('実行')
 
 if submitted:
     st.markdown(f'''
