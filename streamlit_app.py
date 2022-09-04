@@ -10,9 +10,9 @@ def kg_to_lbs():
 st.header('Input')
 col1, spacer, col2 = st.columns([2,1,2])
 with col1:
-    pounds = st.number_input("Pounds:", key = "lbs", on_change = lbs_to_kg)
+    pounds = st.number_input("Pounds:", key = "lbss", on_change = lbs_to_kg)
 with col2:
-    kloglaram = st.number_input("kilograms:", key = "kg", on_change = kg_to_lbs)
+    kloglaram = st.number_input("kilograms:", key = "kgs", on_change = kg_to_lbs)
 
 st.header('Output')
 st.write("st.session_state object:", st.session_state)
