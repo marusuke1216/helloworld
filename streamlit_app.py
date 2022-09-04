@@ -8,7 +8,7 @@ def kg_to_lbs():
     st.session_state.lbs = t.session_state.kg*2.2046
 
 st.header('Input')
-col1, spacer, col2 = st.colums([2,1,2])
+col1, spacer, col2 = st.columns([2,1,2])
 with col1:
     pounds = st.number_input("Pounds:", key = "lbs", on_change = lbs_to_kg)
 with col2:
