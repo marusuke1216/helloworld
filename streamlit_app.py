@@ -1,30 +1,18 @@
 import streamlit as st
 
-st.title('st.experimental_get_query_params')
+st.title('st.session_state')
 
-with st.expander('About this app'):
-  st.write("`st.experimental_get_query_params` allows the retrieval of query parameters directly from the URL of the user's browser.")
+def lbs_to_kg():
+    st.session_state.kg = st.session_state.lbs/2.2046
+def kg_to_lbs():
+    st.session_state.lbs = t.session_state.kg*2.2046
 
-# 1. Instructions
-st.header('1. Instructions')
-st.markdown('''
-In the above URL bar of your internet browser, append the following:
-`?name=Jack&surname=Beanstalk`
-after the base URL `http://share.streamlit.io/dataprofessor/st.experimental_get_query_params/`
-such that it becomes
-`http://share.streamlit.io/dataprofessor/st.experimental_get_query_params/?firstname=Jack&surname=Beanstalk`
-''')
+st.header('Input')
+col1, spacer, col2 = stcolums([2,1,2])
+with col1:
+    pounds = st.number_input("Pounds:", key = "lbs", on_change = lbs_to_kg)
+with col2:
+    kloglaram = st.number_input("kilograms:", key = "kg", on_change = kg_to_lbs)
 
-
-# 2. Contents of st.experimental_get_query_params
-st.header('2. Contents of st.experimental_get_query_params')
-st.write(st.experimental_get_query_params())
-
-
-# 3. Retrieving and displaying information from the URL
-st.header('3. Retrieving and displaying information from the URL')
-
-firstname = st.experimental_get_query_params()['firstname'][0]
-surname = st.experimental_get_query_params()['surname'][0]
-
-st.write(f'Hello **{firstname} {surname}**, how are you?')
+st,header('Output')
+st.write("st.session_state object:", st.session_state)
